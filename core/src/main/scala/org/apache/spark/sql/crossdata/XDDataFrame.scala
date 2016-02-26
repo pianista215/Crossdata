@@ -153,7 +153,8 @@ class XDDataFrame private[sql](@transient override val sqlContext: SQLContext,
         log.info(s"Native query: ${queryExecution.simpleString}")
       }
       */
-      nativeQueryExecutor.flatMap(executeNativeQuery).getOrElse(super.collect())
+      //nativeQueryExecutor.flatMap(executeNativeQuery).getOrElse(super.collect())
+      super.collect()
     }
   }
 
